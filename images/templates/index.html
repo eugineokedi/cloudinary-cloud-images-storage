@@ -1,2 +1,14 @@
 <h1>Cloudinary images down below...</h1>
 
+
+{% for car in cars  %}
+   <div>
+    <p>{{ car.name }}</p>
+    <p>{{ car.model }}</p>
+    <p>{{ car.year }}</p>
+    <p>{{ car.description }}</p>
+    <img src="{{ car.image.url }}" alt="{{ car.name }}" height="150" width="150">
+   </div>
+    
+{% endfor %}
+    

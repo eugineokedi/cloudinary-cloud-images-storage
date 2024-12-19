@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'images',
     'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,10 @@ cloudinary.config(
     api_secret= os.getenv('CLOUDINARY_API_SECRET_KEY'),
     secure=True
 )
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#Upload an image
+# upload_result = cloudinary.uploader.upload(
+#                                            image_file,
+#                                            folder="Cloudinary_cloud_storage",
+#                                            public_id=f"car_{car_id}"
+#                                            )
