@@ -20,6 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #cloudinary imports
 import cloudinary
 import cloudinary.uploader
+import cloudinary.api
 from cloudinary.utils import cloudinary_url
 
 # dotenv configuration
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'images',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
